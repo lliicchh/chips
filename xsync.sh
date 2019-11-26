@@ -18,7 +18,7 @@ user=`whoami`
 #5 循环
 localhost=`hostname`
 echo $localhost
-for host in {centos-01,centos-02,centos-03}; do
+for host in {node-01,node-02,node-03}; do
     if((host==localhost)); then
         echo 'need not cp'
         continue
