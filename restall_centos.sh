@@ -13,14 +13,14 @@
 # VBoxManage clonevm node-01  --mode all --name node-02 --register
 
 # 1. 换网易源
+yum install -y wget
 sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-#cp CentOS7-Base-163.repo etc/yum.repos.d/CentOS-Base.repo
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
 
 # 1.1配置yum
 yum clean all
 yum makecache
-yum install wget
+
 
 # 2.更新
 sudo yum -y update
