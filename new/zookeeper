@@ -1,0 +1,45 @@
+1. zk安装
+tar -zxvf zookeeper-3.5.5.tar.gz
+ln -s zookeeper-3.5.5 zk zookeeper
+echo 'ZOOKEEPER_HOME=/usr/local/zookeeper' | tee -a /etc/profile
+echo 'PATH=$PATH:$ZOOKEEPER_HOME/bin'      | tee -a /etc/profile
+source /etc/profilecd 
+/usr/local/zookeeper/conf && cp zoo_sample.cfg zoo.cfg
+
+2. 集群配置
+vi zoo.cfg
+修改：dataDir=/tmp/zookeeper/data
+修改：dataLogDir=/tmp/zookeeper/log
+新增：注意3888后面不能有空格，不然启动不了
+server.0=node-01:2888:3888
+server.1=node-02:2888:3888
+server.2=node-03:2888:3888
+# touch  /tmp/zookeeper/data/myid
+# 每个节点的myid 不一样0， 1， 2...
+echo '1' >> /tmp/zookeeper/data/myid
+
+3. 集群启动
+#启动集群的zookeeper
+for host in {node-01,node-02,node-03}; do  
+    echo checking $host 
+    ssh $host "/usr/local/zk/bin/zkServer.sh start"
+done
+# 检查一遍状态
+for host in {node-01,node-02,node-03}; do    
+    echo checking $host 
+    ssh $host "/usr/local/zk/bin/zkServer.sh status"
+done
+
+4. 查看日志
+#方法一：
+#1、环境变量在 /etc/profile 中添加
+export zkDir=/usr/local/zookeeper
+export JAVA_OPTS="$JAVA_OPTS -Djava.ext.dirs=$zkDir:$zkDir/lib"
+
+#2、事务日志可视化
+java $JAVA_OPTS org.apache.zookeeper.server.LogFormatter 事务日志
+
+#3、数据快照可视化
+java $JAVA_OPTS  org.apache.zookeeper.server.SnapshotFormatter 数据快照文件
+
+#方法二：zookeeper/lib 下有日志查看工具zkTxnLogToolkit.sh，但是该工具不能查看数据快照文件

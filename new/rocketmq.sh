@@ -10,7 +10,7 @@
 cd /usr/local
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/rocketmq/4.6.0/rocketmq-all-4.6.0-bin-release.zip 
 unzip rocketmq-all-4.6.0-bin-release.zip
-mv rocketmq-all-4.6.0-bin-release rocketmq
+ln -s rocketmq-all-4.6.0-bin-release rocketmq
 
 # 创建存储路径
 mkdir -p /usr/local/rocketmq/store
