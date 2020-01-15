@@ -23,3 +23,5 @@ mkdir /usr/local/zk-3.5.5/data -p  && cd /usr/local/zk-3.5.5/data
 touch myid
 # 每个节点的myid 不一样0， 1， 2...
 touch myid && echo '1' >> /usr/local/zk-3.5.5/data/myid
+
+
