@@ -7,6 +7,9 @@ cd  /usr/local/tcl8.6.1/unix/
 ./configure  
 make && make install
 
+# 也可以用yum 安装
+yum instal tcl
+
 # 1.2 redis  
 cd /usr/local/
 tar -zxvf redis-5.0.5.tar.gz
