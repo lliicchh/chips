@@ -41,3 +41,7 @@ vi /etc/init.d/redis_6379
 # chkconfig:   2345 90 10
 # description:  Redis is a persistent key-value database
 chkconfig redis_6379 on
+
+
+# 1.6 停止带密码的redis-server
+redis-cli -a password shutdown
