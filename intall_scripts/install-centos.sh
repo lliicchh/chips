@@ -18,7 +18,7 @@ sudo yum -y upgrade
 sudo yum install -y git
 sudo yum install -y vim
 
-sudo yum install -y net-tools lsof tcpdump telnet
+sudo yum install -y net-tools lsof tcpdump telnet nc 
 
 # 4.gcc
 sudo yum install -y  gcc g++ make cmake
