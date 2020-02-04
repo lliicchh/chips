@@ -15,8 +15,7 @@ sudo yum -y update
 sudo yum -y upgrade
 
 # 3.安装常用软件
-sudo yum install -y git
-sudo yum install -y vim
+sudo yum install -y git vim tree
 
 sudo yum install -y net-tools lsof tcpdump telnet nc 
 
