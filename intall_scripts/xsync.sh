@@ -19,7 +19,7 @@ user=`whoami`
 localhost=`hostname`
 echo $localhost
 for host in {node-01,node-02,node-03}; do
-    if [ $host -eq $localhost ]; then
+    if [ "$host" = "$localhost" ]; then
         echo 'need not cp'
         continue
     fi
