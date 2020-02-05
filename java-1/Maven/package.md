@@ -104,3 +104,9 @@ idea 可以点击package
   <activeProfiles/>
 </settings>
 ```
+
+### 参考资料
+
+1、maven 官网: http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+2、spring 官网: https://spring.io/guides/gs/spring-boot/
+3、spring cli 官网: https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html
