@@ -1,17 +1,18 @@
-### 命令
+# maven 相关
+
+## 1 | 命令
 
 mvn compile test package install
 
 mvn clean install -U
 
 mvn dependency:tree  
-！命令要在pom.xml 所在目录执行
 
+！注意：以上命令要在pom.xml 所在目录执行
 
+## 2 | maven 打包
 
-### 插件
-
-打一个fatjar(AllInOne)包，即所有的依赖包都包含在这个包里，可以run anywhere 
+如何打一个fatjar(AllInOne)包，即所有的依赖包都包含在这个包里，可以run anywhere 
 
 1. pom.xml 文件中添加
 
