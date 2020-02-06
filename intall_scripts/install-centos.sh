@@ -42,5 +42,6 @@ sudo yum install  -y java java-1.8.0-openjdk-devel.x86_64
 
 # others
 yum -y install yum-utils
+sudo yum-config-manager --add-repo https://openresty.org/yum/cn/centos/OpenResty.repo
 yum -y install openresty
 
