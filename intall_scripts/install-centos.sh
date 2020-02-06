@@ -36,6 +36,11 @@ sudo yum -y install tree
 sudo yum -y install man-pages libstdc++-docs #安装开发手册
 sudo yum install tcl.x86_64
 sudo yum -y install pcre-devel openssl openssl-devel
+
 # 7. java
 sudo yum install  -y java java-1.8.0-openjdk-devel.x86_64
+
+# others
+yum -y install yum-utils
+yum -y install openresty
 
