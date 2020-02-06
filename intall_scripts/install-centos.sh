@@ -45,3 +45,11 @@ yum -y install yum-utils
 sudo yum-config-manager --add-repo https://openresty.org/yum/cn/centos/OpenResty.repo
 yum -y install openresty
 
+# goaccess
+sudo yum install geoip-devel ncurses ncurses-devel glib2-devel -y
+wget https://tar.goaccess.io/goaccess-1.3.tar.gz
+tar -xzvf goaccess-1.3.tar.gz
+cd goaccess-1.3/
+./configure --enable-utf8 --enable-geoip=legacy
+make
+make install
