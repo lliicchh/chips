@@ -53,3 +53,6 @@ cd goaccess-1.3/
 ./configure --enable-utf8 --enable-geoip=legacy
 make
 make install
+
+# httpie 比curl 适合阅读
+yum install httpie -y
