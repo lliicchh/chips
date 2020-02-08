@@ -28,8 +28,8 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 # aliyun 加速
-sudo mkdir -p /etc/docker
-touch /etc/docker/daemon.json
-echo -e '{\n    "registry-mirrors": ["https://gzfb1qey.mirror.aliyuncs.com"]\n}' | sudo tee /etc/docker/daemon.json 
-sudo systemctl daemon-reload
-sudo systemctl restart docker
+# sudo mkdir -p /etc/docker
+# touch /etc/docker/daemon.json
+# echo -e '{\n    "registry-mirrors": ["https://gzfb1qey.mirror.aliyuncs.com"]\n}' | sudo tee /etc/docker/daemon.json 
+# sudo systemctl daemon-reload
+# sudo systemctl restart docker
