@@ -2,6 +2,10 @@
 
 # https://juejin.im/post/5c088b066fb9a049d4419985
 
+
+sudo rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+sudo yum --enablerepo=mysql80-community install mysql-community-server -y
+
 # mysql# 使用163repo 才装上了，aliyun repo 总是下载mysql-server 失败
 sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 yum clean all && yum makecache
