@@ -61,3 +61,6 @@ sudo yum install snapd -y
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install http
+
+# 网络管理工具
+sudo yum install sar ss iftop sysstat   -y
