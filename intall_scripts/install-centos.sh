@@ -55,4 +55,9 @@ make
 make install
 
 # httpie 比curl 适合阅读
-yum install httpie -y
+# yum install httpie -y
+sudo yum install epel-release -y
+sudo yum install snapd -y
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install http
