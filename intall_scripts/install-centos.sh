@@ -64,3 +64,4 @@ sudo snap install http
 
 # 网络管理工具
 sudo yum install sar ss iftop sysstat   -y
+sudo yum install strace
